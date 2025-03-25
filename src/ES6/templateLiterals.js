@@ -26,8 +26,7 @@ export const templateLiterals = () => {
   console.log('============= Template created with ES6 ==============');
 
   let myMessage = `Hello I am here because I want to learn ${myObectTemplate.learn}
- from HiCollege here at ${myObectTemplate.hiCollege}
-`;
+ from HiCollege here at ${myObectTemplate.hiCollege}`;
   console.log(myMessage);
 
   // ES5

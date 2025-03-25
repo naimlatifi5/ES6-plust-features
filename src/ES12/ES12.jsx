@@ -3,13 +3,6 @@ import { logicalAssignmentOperator } from './logicalAssignmentOperator';
 import { numericSeperator } from './numericSeperator';
 import { getName, getNamePrivate } from './privateGettersSetters';
 import { replaceAll } from './replaceAll';
-// import './numericSeperator.js';
-// import './replaceAll.js';
-// import './logicalAssignmentOperator.js';
-// import './promiseAny.js';
-// import './privateMethods.js';
-// import './privateGettersSetters.js';
-// import './weakRefs.js';
 const ES12 = () => {
   logicalAssignmentOperator();
 
@@ -28,10 +21,10 @@ const ES12 = () => {
 
   return (
     <div>
-      New features of ES12
+      New features of ES12 (ECMAScript 2021)
       <ul>
         <li>Numeric separators</li>
-        <li>String.prototype.replaceAll</li>
+        <li>String replaceAll</li>
         <li>Logical assignment operators</li>
         <li>Promise.any</li>
         <li>Private class methods</li>

@@ -55,7 +55,7 @@ export const sayHelloToRestAndSpread = () => {
 
   console.log('======= ES5 handling arguments =========');
 
-  const logAllArguments = () => {
+  function logAllArguments() {
     console.log('Arguments in function log all argument ', arguments);
     console.log('type of arguments ', typeof arguments); // they are like array object but not real array and does not support methods and properties for an array
     for (var i = 0; i <= arguments.length; i++) {
@@ -74,7 +74,7 @@ export const sayHelloToRestAndSpread = () => {
       console.log('Value is ', val);
       console.log('Index is ', index);
     });
-  };
+  }
   logAllArguments('naim', 'latifi');
 
   console.log('========= ES6 rest operator =========');

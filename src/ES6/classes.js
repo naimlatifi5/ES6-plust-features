@@ -1,21 +1,19 @@
-console.log("*********** From cunstructors to classes ***************");
+console.log('*********** From cunstructors to classes ***************');
 
-console.log("========== Prototypes with ES5========");
+console.log('========== Prototypes with ES5========');
 
 function Person(name) {
   this.name = `Hello from constructor function ${name}`;
 }
 Person.prototype.displayName = function () {
   return this.name;
-}
+};
 let person1 = new Person('Naim');
 console.log(person1.displayName());
-console.log("Is instance of Person ? ", person1 instanceof Person);
+console.log('Is instance of Person ? ', person1 instanceof Person);
 
-
-
-console.log("============== Classes with ES6 ==============");
-// class declarationd 
+console.log('============== Classes with ES6 ==============');
+// class declarationd
 class Person1 {
   // equivalent to the constructor function Person
   constructor(name) {
@@ -31,16 +29,13 @@ class Person1 {
 
 let person2 = new Person1('Naim');
 console.log(person2.displayName());
-console.log(typeof Person1) // function
-console.log("Is it instance of class Person1 ?", person2 instanceof Person1);
+console.log(typeof Person1); // function
+console.log('Is it instance of class Person1 ?', person2 instanceof Person1);
 
-
-
-
-console.log("===============Inheritance =============");
+console.log('===============Inheritance =============');
 class Father1 {
   constructor(name) {
-    this.fatherName = "Anders";
+    this.fatherName = 'Anders';
     this.name = name;
     this.addresses = ['Söderberga', 'Nacka'];
   }
@@ -55,14 +50,13 @@ class Father1 {
   getAddresses() {
     return this.addresses;
   }
-
 }
 
-console.log("========== ES6 inheritance ========")
+console.log('========== ES6 inheritance ========');
 class Child3 extends Father1 {
   constructor(name, age) {
     // no need for stealing constructor here instad we use super
-    super(name)
+    super(name);
     this.age = age;
   }
 
@@ -71,8 +65,8 @@ class Child3 extends Father1 {
   }
 }
 
-console.log("child")
-let firstChild = new Child3("Leo", '2');
+console.log('child');
+let firstChild = new Child3('Leo', '2');
 console.log(firstChild.sayFathersName());
 console.log(firstChild.sayName());
 console.log(firstChild.getChildAge());
@@ -86,9 +80,7 @@ console.log(secondChild.sayName());
 console.log(secondChild.getChildAge());
 console.log(secondChild.getAddresses());
 
-
-
-console.log("========== WITH ES5 inheritance==========")
+console.log('========== WITH ES5 inheritance==========');
 
 function Father2(name) {
   this.name = name;
@@ -97,7 +89,7 @@ function Father2(name) {
 }
 Father2.prototype.sayFatherName = function () {
   console.log(this.fathersName);
-}
+};
 
 function Child2(name, age) {
   // stealing constructor
@@ -108,8 +100,8 @@ function Child2(name, age) {
 Child2.prototype = new Father2();
 Child2.prototype.sayName = function () {
   return this.name;
-}
+};
 let firstChildES5 = new Child2('Joe', 22);
-console.log("First child ", firstChildES5);
+console.log('First child ', firstChildES5);
 console.log(firstChildES5.sayFatherName());
 console.log(firstChildES5.sayName());
