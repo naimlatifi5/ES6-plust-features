@@ -1,21 +1,46 @@
 import React from 'react';
-import './variableScopingLetConst.js';
-import './templateLiterals.js';
-import './arrowFunction.js';
-import './destructing.js';
-import './sayHelloToRestAndSpread.js';
-import './objectLiterals.js';
-import './modules.js';
 import './classes.js';
-import './promises.js';
+import { arrowFunction } from './arrowFunction.js';
+import { desctruction } from './destructing.js';
+import { modules } from './modules.js';
+import { objectLiterals } from './objectLiterals.js';
+import { sayHelloToRestAndSpread } from './sayHelloToRestAndSpread.js';
+import { templateLiterals } from './templateLiterals.js';
+import { promises } from './promises.js';
+import { variableScopingLetConst } from './variableScopingLetConst.js';
+
 const ES6 = () => {
+  console.log('====== Variable scoping ======'); // Variable scoping
+  variableScopingLetConst();
+
+  console.log('====== Template literals ======'); // Template literals
+  templateLiterals();
+
+  console.log('====== Object literal ======'); // Object literal
+  objectLiterals();
+
+  console.log('====== Say hello to spread and rest ======'); // Say hello to spread and rest
+  sayHelloToRestAndSpread();
+
+  console.log('====== Destructing ======'); // Destructing
+  desctruction();
+
+  console.log('====== Arrow Function ======'); // Arrow Function
+  arrowFunction();
+
+  console.log('====== Modules ======'); // Modules
+  modules();
+
+  console.log('====== Promises ======'); //Promises
+  promises();
+
   return (
-    <div>
+    <>
       ES6 features
       <ul>
         <li>Let and const</li>
       </ul>
-    </div>
+    </>
   );
 };
 
