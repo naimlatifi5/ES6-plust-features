@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Links:
 
 https://gist.github.com/rajaramtt/7df3702a04c644b0b62c9a64f48f3dbf#2-ecmascript-2016---es-7
+https://dev.to/shubhamtiwari909/es6-to-es14-features-list-57am

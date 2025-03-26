@@ -1,13 +1,14 @@
 import React from 'react';
 import { objectRest } from './objectRest';
-import { promiseFinally, testFinally } from './promiseFinally';
+import { objectSpread } from './objectSpread';
+import { testFinally } from './promiseFinally';
 
 const ES9 = () => {
-  objectRest();
-  testFinally()
-    .then(() => console.debug('resolved'))
-    .finally(() => console.debug('finally'));
-  objectSpread();
+  // objectRest();
+  // testFinally()
+  //   .then(() => console.debug('resolved'))
+  //   .finally(() => console.debug('finally'));
+  // objectSpread();
 
   return (
     <>

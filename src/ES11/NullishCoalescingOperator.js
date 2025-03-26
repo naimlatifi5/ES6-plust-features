@@ -7,6 +7,7 @@ export const nullishCoalescingOperator = () => {
   console.log('' || 'default'); // default
   console.log(NaN || 'default'); // default
 
+  //(??) is a new JS operator allowing basically to provide a "default value" when the accessed one is either null or undefined.
   // with nullishCoalescing operator
   console.log(null ?? 'default');
   console.log(undefined ?? 'default');
