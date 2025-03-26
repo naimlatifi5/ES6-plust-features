@@ -2,6 +2,7 @@ export const es5 = () => {
   // with ES5
   let myArray = [1, 2, 3];
   if (myArray.indexOf(3) > 0) {
+    // if not found returns -1
     console.log('ES5 - We found the element');
   }
 };

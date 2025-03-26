@@ -1,4 +1,6 @@
 export const weakRefs = () => {
+  // WeakRefs - allow you to reference objects without preventing them from being garbage collected.
+
   const callback = () => {
     const aBigObj = {
       name: 'Backbencher',

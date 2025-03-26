@@ -5,9 +5,9 @@ import { promiseAllSettled } from './PromiseAllSettled';
 import { stringMatchAll } from './stringMatchAll';
 
 const ES11 = () => {
-  nullishCoalescingOperator();
-  optionalChaining();
-  promiseAllSettled();
+  // nullishCoalescingOperator();
+  // optionalChaining();
+  // promiseAllSettled();
   stringMatchAll();
 
   return (
@@ -18,7 +18,7 @@ const ES11 = () => {
         <li>Promsise allSettled</li>
         <li>Optional chaining</li>
         <li>Nullish Coalescing operator</li>
-        <l>String match all</l>
+        <li>String match all</li>
       </ul>
     </div>
   );

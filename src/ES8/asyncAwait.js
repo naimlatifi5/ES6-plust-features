@@ -1,4 +1,8 @@
 export const asyncAwait = async () => {
-  const response = await fetch('someUrl');
-  return response.json();
+  try {
+    const response = await fetch('someUrl');
+    return response.json();
+  } catch (error) {
+    console.log('Error occured', error);
+  }
 };

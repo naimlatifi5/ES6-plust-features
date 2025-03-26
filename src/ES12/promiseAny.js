@@ -1,6 +1,6 @@
 export const promiseAny = () => {
   console.log('========== Promise Any  ============');
-
+  // Promise.any() - returns the first promise that resolves
   const A = new Promise((resolve, reject) => {
     setTimeout(() => resolve('A resolved'), 500);
   });
@@ -22,7 +22,7 @@ export const promiseAny = () => {
 
   const resolvedPromises = async () => {
     const resolved = await Promise.any([A, B, C]);
-    console.log('One of promise resolved faster :', resolved);
+    console.log('One of promise resolved faster return :', resolved);
   };
   const rejectedPromises = async () => {
     const rejected = await Promise.any([D, E]);

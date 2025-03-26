@@ -1,4 +1,5 @@
 export const promiseAllSettled = () => {
+  // Promise.allSettled() - Returns a promise that resolves when all promises have been settled (either resolved or rejected).
   const A = new Promise((resolve, reject) => {
     setTimeout(() => resolve('A resolved'), 500);
   });

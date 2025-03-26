@@ -3,19 +3,19 @@ export const replaceAll = () => {
 
   const str = 'HIQS to be best HIQS';
   const newStr = str.replace('HIQS', 'HIQ');
-  console.log(newStr); // "Frontbencher sits at the Back" --- this replace only the first occurrance Back-bancher and not Back at the end of string
+  console.log('what is first new string', `****${newStr}***`);
 
   // to fix this we will use a regex
-
   const str1 = 'HIQS to be best HIQS';
   const newStr1 = str1.replace(/HIQS/g, 'HIQ');
-  console.log(newStr1); // "Frontbencher sits at the Front"
+  console.log('what is first new string with regex', `****${newStr1}***`);
 
   // but now with ES12 we can use prototype method replaceAll()
+  // replaceAll() - replacing all occurrences of a substring in a string
 
   const str2 = 'HIQS to be best HIQS';
   const newStr2 = str2.replaceAll('HIQS', 'HIQ');
-  console.log(newStr2); // "Frontbencher sits at the Front"
+  console.log('String with replace all', `****${newStr2}***`);
 
   let myString = 'This is interesting book that contains interesting examples';
   let strReplaceAll = myString.replaceAll('interesting', 'Javascript');

@@ -13,7 +13,7 @@ console.log(person1.displayName());
 console.log('Is instance of Person ? ', person1 instanceof Person);
 
 console.log('============== Classes with ES6 ==============');
-// class declarationd
+// #8 - Classes - Syntactic sugar for prototypes
 class Person1 {
   // equivalent to the constructor function Person
   constructor(name) {

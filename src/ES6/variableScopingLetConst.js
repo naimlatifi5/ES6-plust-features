@@ -4,9 +4,6 @@ export const variableScopingLetConst = () => {
    *                                           *
    ********************************************/
 
-  // variable and scoping ES6
-  console.log('=================Variable and scoping===============');
-
   console.log('********* example wth const variable ***********');
   const hello = 'Naim';
   //hello = "cannot change"; //prints-> hello is read-only
@@ -62,50 +59,28 @@ export const variableScopingLetConst = () => {
     '*************** Example scenario with loop and variable declaration - ES5 *********',
   );
 
-  // function exampleScenarioES5() {
-  //   for (var i = 1; i < 5; i++) {
-  //     //(function(x){ add anonoymous function where we create a closure for setTimeout function
-  //     setTimeout(function () {
-  //       console.log("Scenario with ES5 what does it print after 1 sec", i); // changed to x when added annonymous function
-  //     }, 900);
-  //     //}(i))
-  //   }
-  // }
-  console.log('************ Scendarion with loop and let declaration - ES6 **************');
-
-  function exampleScenarioES6() {
-    // block scope
-    for (let i = 1; i < 5; i++) {
-      setTimeout(() => {
-        console.log('Scenario with ES6 what does it print after 1 sec', i);
-      }, 1000);
-    }
-  }
-
-  //exampleScenarioES5();
-  exampleScenarioES6();
-
   console.log('************ Var in for loop one more example - ES5***********');
-
-  // function varInForLoopES5() {
-  //   const arr = [];
-  //   const myArray = [1, 2, 3];
-  //   for (var i of myArray) {
-  //     arr.push(() => i);
-  //   }
-  //   console.log("What is my array", arr.map(x => x())); // [3,3,3] // because var is hoisted inside for loop
-  // }
-  // varInForLoopES5();
+  function varInForLoopES5() {
+    const arr = [];
+    const myArray = [1, 2, 3];
+    for (var i of myArray) {
+      arr.push(() => i);
+    }
+    console.log(
+      'What is my array',
+      arr.map((x) => x()),
+    ); // [3,3,3] // because var is hoisted inside for loop
+  }
+  varInForLoopES5();
 
   console.log('************ Let in for loop one more example **************');
-
   function letInForLoopES6() {
     const arr = [];
     const myArray = [1, 2, 3];
     // use const in loops because only one binding is created per iteration
     for (const i of myArray) {
       // const and block level variable is not hoisted
-      arr.push(() => i);
+      arr.push(() => i); // creates a closure and push to array
     }
     console.log(
       'My array data ',
@@ -133,4 +108,40 @@ export const variableScopingLetConst = () => {
   // ff[0]();
   // ff[1]();
   // ff[2]();
+
+  function exampleScenarioES5() {
+    for (var i = 1; i < 5; i++) {
+      setTimeout(function () {
+        console.log('Scenario with ES5 what does it print after 1 sec', i);
+      }, 900);
+    }
+  }
+  // workaround with annonymous function
+  function exampleScenarioES5WithInvokeFun() {
+    for (var i = 1; i < 5; i++) {
+      (function (x) {
+        setTimeout(function () {
+          console.log(
+            'Scenario with ES5 what does it print after 1 sec - workaround with annonymous function',
+            x,
+          ); // change variable i to x when added annonymous function
+        }, 900);
+      })(i);
+    }
+  }
+
+  console.log('************ Scendarion with loop and let declaration - ES6 **************');
+
+  function exampleScenarioES6() {
+    // block scope
+    for (let i = 1; i < 5; i++) {
+      setTimeout(() => {
+        console.log('Scenario with ES6 what does it print after 1 sec', i);
+      }, 1000);
+    }
+  }
+
+  exampleScenarioES5();
+  exampleScenarioES5WithInvokeFun();
+  // exampleScenarioES6();
 };

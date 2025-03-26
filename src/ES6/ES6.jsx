@@ -10,8 +10,8 @@ import { promises } from './promises.js';
 import { variableScopingLetConst } from './variableScopingLetConst.js';
 
 const ES6 = () => {
-  console.log('====== Variable scoping ======'); // Variable scoping
-  variableScopingLetConst();
+  //console.log('====== Variable scoping ======'); // Variable scoping
+  // variableScopingLetConst();
 
   // console.log('====== Template literals ======'); // Template literals
   // templateLiterals();
@@ -19,8 +19,8 @@ const ES6 = () => {
   // console.log('====== Object literal ======'); // Object literal
   // objectLiterals();
 
-  // console.log('====== Say hello to spread and rest ======'); // Say hello to spread and rest
-  // sayHelloToRestAndSpread();
+  console.log('====== Say hello to spread and rest ======'); // Say hello to spread and rest
+  sayHelloToRestAndSpread();
 
   // console.log('====== Destructing ======'); // Destructing
   // desctruction();

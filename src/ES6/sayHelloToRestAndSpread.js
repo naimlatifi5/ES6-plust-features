@@ -25,7 +25,7 @@ export const sayHelloToRestAndSpread = () => {
   console.log('========== ES6 default parameters =============');
   // ES6
   const defaultParamsBirthdayES6 = (name, lastName, birthday = '19860522') => {
-    console.log(name, +'' + lastName + ' ' + birthday);
+    console.log(name, lastName, birthday);
   };
   defaultParamsBirthdayES6('Naim', 'Latifi');
 
@@ -50,8 +50,6 @@ export const sayHelloToRestAndSpread = () => {
    *        Rest parameter in  ES6             *
    *                                           *
    *********************************************/
-
-  console.log('========== Rest and spread ES5 vs ES6 ===========');
 
   console.log('======= ES5 handling arguments =========');
 

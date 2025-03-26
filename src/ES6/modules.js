@@ -20,6 +20,7 @@ export const modules = () => {
   // console.log(nameSpace.module1);
   // import only two bindings
   console.log('============ ES6 modules ============');
+  // #9 - Import and export modules
   console.log('couponCodes example imported here ', taxRate);
   console.log(helloWorld());
 

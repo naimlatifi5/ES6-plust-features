@@ -4,20 +4,20 @@ import { numericSeperator } from './numericSeperator';
 import { getName, getNamePrivate } from './privateGettersSetters';
 import { replaceAll } from './replaceAll';
 const ES12 = () => {
-  logicalAssignmentOperator();
+  //logicalAssignmentOperator();
 
-  numericSeperator();
+  // numericSeperator();
 
-  getName();
-  getNamePrivate();
+  // getName();
+  // getNamePrivate();
 
-  privateMethods();
+  // privateMethods();
 
-  promiseAny();
+  // promiseAny();
 
   replaceAll();
 
-  weakRefs();
+  // weakRefs();
 
   return (
     <div>
