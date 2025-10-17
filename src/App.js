@@ -10,6 +10,7 @@ import ES12 from './ES12/ES12';
 import ES13 from './ES13/ES13';
 import ES14 from './ES14/ES14';
 import ES15 from './ES15/ES15';
+import ES16 from './ES16/ES16';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
             <li>
               <Link to='/ES15'>ES15</Link>
             </li>
+            <li>
+              <Link to='/ES16'>ES16</Link>
+            </li>
           </ul>
         </nav>
 
@@ -61,6 +65,8 @@ function App() {
           <Route path='/ES13' element={<ES13 />} />
           <Route path='/ES14' element={<ES14 />} />
           <Route path='/ES15' element={<ES15 />} />
+          <Route path='/ES16' element={<ES16 />} />
+          <Route path='/ES16' element={<ES16 />} />
         </Routes>
       </div>
     </Router>
