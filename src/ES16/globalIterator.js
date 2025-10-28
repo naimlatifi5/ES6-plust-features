@@ -42,27 +42,24 @@ export const globalIterator = () => {
     console.log('Iterator.from not available in this environment');
   }
 
-  // 4. How we handled iteration BEFORE ES16
-  console.log('\n4. Iteration patterns BEFORE ES16:');
 
-  // Manual iterator implementation
-  function createArrayIterator(arr) {
-    let index = 0;
-    return {
-      next() {
-        if (index < arr.length) {
-          return { value: arr[index++], done: false };
-        }
-        return { done: true };
-      },
-      [Symbol.iterator]() {
-        return this;
-      },
-    };
-  }
+  const scores = [100, 85, 90, 95, 70];
+const topScores = scores
+  .filter(score => score > 80)
+  .map(score => `Score: ${score}%`);
+  console.log(topScores);
 
-  const manualIterator = createArrayIterator([1, 2, 3]);
-  console.log('Manual iterator:', [...manualIterator]);
+
+// The Iterator approach is lazy, processing elements one at a time without creating temporary arrays,
+// which is a lifesaver for large datasets.
+const scores1 = [100, 85, 90, 95, 70];
+const topScores1 = Iterator.from(scores1)
+  .filter(score => score > 80)
+  .map(score => `Score: ${score}%`)
+  .toArray();
+console.log(topScores1);
+
+
 
   // 5. Iterator.zip() - NEW in ES16
   console.log('\n5. Iterator.zip() - ES16 Feature:');

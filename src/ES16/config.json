@@ -1,0 +1,4 @@
+{
+  "theme": "ES16",
+  "charts": ["bartest", "line"]
+}
