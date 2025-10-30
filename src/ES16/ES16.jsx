@@ -2,6 +2,7 @@ import React from 'react';
 import { globalIterator } from './globalIterator';
 import { loadConfig } from './loadJSConfig';
 import config from './config.json' with { type: 'json' };
+import {regExpExample,beforeRegExpEscape,regExpEscapeFeature} from './RegExpEscape';
 
 const ES16 = () => {
   const runGlobalIteratorExamples = () => {
@@ -17,6 +18,14 @@ const ES16 = () => {
   console.log(config.theme);
   console.log(config.charts); // ['bar', 'line']
 
+
+  console.log("=== ES16 RegExp Escape Example ===\n");
+  regExpExample();
+  console.log("\n=== Before ES16 RegExp Escape Example ===\n");
+  beforeRegExpEscape();
+  console.log("\n=== ES16 RegExp.escape() Feature ===\n");
+  regExpEscapeFeature();
+
   return (
     <>
       <h2>New features of ES16 (ES2025)</h2>
@@ -31,6 +40,7 @@ const ES16 = () => {
           </ul>
         </li>
         <li>JSON module</li>
+        <li>RegExp.escape() - Escape special characters in strings for use in regular expressions</li>
       </ul>
 
       <button
