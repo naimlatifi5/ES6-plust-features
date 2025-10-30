@@ -25,7 +25,7 @@ export const regExpEscapeFeature = () => {
   const keyword = "wake.up";
   const regex1 = new RegExp(RegExp.escape(keyword), "i");
 
-console.log(regex1); // /wake\.up/i // replaced . with literal \.
-console.log("wake.up".match(regex1)); // ✅ Exact match
-console.log("wake-up".match(regex1)); // ❌ No match
+  console.log(regex1); // /wake\.up/i // replaced . with literal \.
+  console.log("wake.up".match(regex1)); // ✅ Exact match
+  console.log("wake-up".match(regex1)); // ❌ No match
 }
